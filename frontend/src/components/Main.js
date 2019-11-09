@@ -10,8 +10,8 @@ class Main extends Component {
     const cards = [
       {name: '遺言者', link: 'yuigonshya'},
       {name: '遺言執行人'},
-      {name: '相続人'},
-      {name: '財産'},
+      {name: '相続人', link: 'sozokunin'},
+      {name: '財産', link: 'zaisan'},
       {name: '資産分配'},
       {name: '印刷'},
       {name: '伝えたいこと'},
