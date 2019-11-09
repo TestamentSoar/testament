@@ -38,8 +38,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'rest_framework'
+    'rest_framework',
+    'django_filters',
+
+    'user',
+    'heir',
+    'property_app',
+
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -101,6 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = "user.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
