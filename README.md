@@ -16,6 +16,12 @@ cd ..
 docker-compose up
 ```
 
+```
+docker-compose run backend python manage.py makemigrations
+docker-compose run backend python manage.py migrate
+```
+
 and access the
 backend: http://localhost:8000/
 frontend: http://localhost:3000/
+
