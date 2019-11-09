@@ -13,11 +13,11 @@ cd ..
 ```
 
 ```
-docker-compose up
+docker-compose run backend python manage.py migrate
 ```
 
 ```
-docker-compose run backend python manage.py migrate
+docker-compose up
 ```
 
 and access the
