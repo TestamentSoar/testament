@@ -8,7 +8,7 @@ class Main extends Component {
 
   render() {
     const cards = [
-      {name: '遺言者'},
+      {name: '遺言者', link: 'yuigonshya'},
       {name: '遺言執行人'},
       {name: '相続人'},
       {name: '財産'},
