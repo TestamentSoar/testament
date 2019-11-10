@@ -32,12 +32,10 @@ class Zaisan extends Component {
           <label>支店</label>
           <Input name="branch" value={this.state.inputs.branch} />
           <label>講座の種類</label>
-          <Input name="account_type" value={this.state.inputs.account_type} />
-          <InputLabel id="demo-simple-select-label">Account type</InputLabel>
           <Select
             labelId="account_type-label"
             id="account_type"
-            value={this.state.imputs.account_type}
+            value={this.state.inputs.account_type}
           >
             <MenuItem value={0}>Saving account</MenuItem>
             <MenuItem value={1}>Current account</MenuItem>
