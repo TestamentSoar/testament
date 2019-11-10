@@ -11,11 +11,10 @@ class Zaisan extends Component {
     this.state = {
       image: [],
       inputs: {
-        name: '',
-        founded_date: '',
-        point: '',
-        introduction: '',
-        hobby: '',
+        address: '',
+        floor_count: '',
+        floor_plan: '',
+        price: '',
       },
     };
   }
@@ -24,20 +23,14 @@ class Zaisan extends Component {
     return (
       <div>
         <FormControl>
-          <label>預貯金</label>
-          <Input name="name" value={this.state.inputs.name} />
           <label>住所</label>
-          <Input name="alias" value={this.state.inputs.founded_date} />
-          <label>本籍</label>
-          <Input name="hobby" value={this.state.inputs['hobby']} />
-          <label>生年月日</label>
-          <Input name="point" value={this.state.inputs.point} />
-          <label>仕事</label>
-          <Input name="introduction" value={this.state.inputs.introduction} />
-          <label>関係</label>
-          <Input name="introduction" value={this.state.inputs.introduction} />
-          <label>価値予想</label>
-          <Input name="introduction" value={this.state.inputs.introduction} />
+          <Input name="address" value={this.state.inputs.address} />
+          <label>何階建</label>
+          <Input name="floor_count" value={this.state.inputs.floor_count} />
+          <label>間取</label>
+          <Input name="floor_plan" value={this.state.inputs.floor_plan} />
+          <label>価格</label>
+          <Input name="price" value={this.state.inputs.price} />
           <Button variant="raised" onClick={this.handleSubmit}>
             Submit
           </Button>
