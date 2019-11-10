@@ -29,5 +29,5 @@ urlpatterns = [
     path('api/v1/', include(heir_router.urls)),
     path('api/v1/', include(property_router.urls)),
     path('api/v1/', include(executive_router.urls)),
-    path('swagger/', schema_view), 
+    path('api/v1/document', schema_view), 
 ]
