@@ -19,6 +19,7 @@ from rest_framework_swagger.views import get_swagger_view
 from user.urls import router as user_router
 from heir.urls import router as heir_router
 from property_app.urls import router as property_router
+from executive.urls import router as executive_router
 
 schema_view = get_swagger_view(title='API Lists')
 
@@ -27,5 +28,6 @@ urlpatterns = [
     path('api/v1/', include(user_router.urls)),
     path('api/v1/', include(heir_router.urls)),
     path('api/v1/', include(property_router.urls)),
+    path('api/v1/', include(executive_router.urls)),
     path('swagger/', schema_view), 
 ]

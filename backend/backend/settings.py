@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'user',
     'heir',
     'property_app',
+    'executive'
 
 ]
 
