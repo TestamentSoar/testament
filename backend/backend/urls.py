@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework_swagger.views import get_swagger_view
 from user.urls import router as user_router
 from heir.urls import router as heir_router
 from property_app.urls import router as property_router
+
+schema_view = get_swagger_view(title='API Lists')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/', include(user_router.urls)),
     path('api/v1/', include(heir_router.urls)),
     path('api/v1/', include(property_router.urls)),
+    path('swagger/', schema_view), 
 ]
