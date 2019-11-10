@@ -91,7 +91,7 @@ class Yuigonshya extends Component {
             <Box m={2} />
             <Grid item xs={11}>
              <Typography align='center' variant='h1' component='h1'>
-                <Button variant="raised" onClick={this.handleSubmit}>
+                <Button variant="text" onClick={this.handleSubmit}>
                   登録
                 </Button>
               </Typography>
