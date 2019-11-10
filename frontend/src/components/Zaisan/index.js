@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axis from 'axios'
+import axios from 'axios'
 //import DropZone from 'react-dropzone';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
