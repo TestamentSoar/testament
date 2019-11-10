@@ -3,6 +3,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import {Pie} from 'react-chartjs-2';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import FormLabel from '@material-ui/core/FormLabel';
 
 class PlanDist extends Component {
   constructor() {
@@ -50,6 +52,7 @@ class PlanDist extends Component {
     return (
       <div>
         <FormControl>
+          <FormLabel>財産の分配具合を記入してください</FormLabel>
           {sozokus.map(sozoku => (
             <div>
               <label>{sozoku.name}</label>
@@ -65,6 +68,13 @@ class PlanDist extends Component {
                           inputs: {...this.state.inputs, a: e.target.value},
                         })
                       }
+                      endAdornment={
+                        <InputAdornment position="end">%</InputAdornment>
+                      }
+                      aria-describedby="outlined-weight-helper-text"
+                      inputProps={{
+                        'aria-label': 'weight',
+                      }}
                     />
                   );
                 } else if (sozoku.id === 1) {
@@ -78,6 +88,13 @@ class PlanDist extends Component {
                           inputs: {...this.state.inputs, b: e.target.value},
                         })
                       }
+                      endAdornment={
+                        <InputAdornment position="end">%</InputAdornment>
+                      }
+                      aria-describedby="outlined-weight-helper-text"
+                      inputProps={{
+                        'aria-label': 'weight',
+                      }}
                     />
                   );
                 } else if (sozoku.id === 2) {

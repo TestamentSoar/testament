@@ -4,6 +4,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 class Sozokunin extends Component {
   constructor() {
