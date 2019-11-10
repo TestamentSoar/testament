@@ -22,14 +22,18 @@ class Yuigonshya extends Component {
       image: [],
       inputs: {
         name: '',
-        founded_date: '',
-        point: '',
-        introduction: '',
-        hobby: '',
+        address: '',
+        honseki: '',
+        birth: '',
+        mail: '',
+        pass: '',
       },
     };
   }
-
+  handleChange(e) {
+    console.log(e);
+    this.setState({inputs: e.inputs});
+  }
   render() {
     return (
       <div>
@@ -50,14 +54,38 @@ class Yuigonshya extends Component {
             <Grid item xs={11}>
               <Typography align="left" variant="h6" component="h2">
                 <label>名前</label>
-                <Input name="name" value={this.state.inputs.name} />
+                <Input
+                  name="name"
+                  value={this.state.inputs.name}
+                  onChange={e =>
+                    this.handleChange({
+                      ...this.state,
+                      inputs: {
+                        ...this.state.inputs,
+                        name: e.target.value,
+                      },
+                    })
+                  }
+                />
               </Typography>
             </Grid>
             <Box m={2} />
             <Grid item xs={11}>
               <Typography align="left" variant="h6" component="h2">
                 <label>住所</label>
-                <Input name="alias" value={this.state.inputs.founded_date} />
+                <Input
+                  name="alias"
+                  value={this.state.inputs.address}
+                  onChange={e =>
+                    this.handleChange({
+                      ...this.state,
+                      inputs: {
+                        ...this.state.inputs,
+                        address: e.target.value,
+                      },
+                    })
+                  }
+                />
               </Typography>
             </Grid>
             <Box m={2} />
