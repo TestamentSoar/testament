@@ -8,6 +8,8 @@ import Zaisan from './components/Zaisan';
 import Explain from './components/WalkThrough/Explain';
 import Rules from './components/WalkThrough/Rules';
 import PlanDist from './components/Distribution/PlanDist';
+import PropDist from './components/Distribution/PropDist';
+
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
         <Route path="/sozokunin" component={Sozokunin}></Route>
         <Route path="/zaisan" component={Zaisan}></Route>
         <Route path="/plandist" component={PlanDist}></Route>
+        <Route path="/propdist" component={PropDist}></Route>
       </Router>
     </div>
   );

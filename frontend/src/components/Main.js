@@ -9,10 +9,9 @@ class Main extends Component {
   render() {
     const cards = [
       {name: '遺言者', link: 'yuigonshya'},
-      {name: '遺言執行人'},
       {name: '相続人', link: 'sozokunin'},
       {name: '財産', link: 'zaisan'},
-      {name: '資産分配'},
+      {name: '資産分配', link: 'plandist'},
       {name: '印刷'},
       {name: '伝えたいこと'},
       {name: '葬儀'},
