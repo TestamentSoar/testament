@@ -20,7 +20,8 @@ docker-compose run backend python manage.py migrate
 docker-compose up
 ```
 
-and access the
-backend: http://localhost:8000/
+## URLs
+
+backend: http://localhost:8000/swagger
 frontend: http://localhost:3000/
 
