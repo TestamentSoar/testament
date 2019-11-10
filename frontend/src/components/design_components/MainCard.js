@@ -22,7 +22,7 @@ const MainCard = props => {
   return (
     <div>
       {(() => {
-        if (card.name === '印刷') {
+        if (card.name === '遺言書の印刷') {
           return (
             <a href={pdf}>
               <Card className={classes.card}>

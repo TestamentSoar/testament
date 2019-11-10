@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import axios from 'axios'
+import axios from 'axios';
 //import DropZone from 'react-dropzone';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
@@ -22,29 +22,26 @@ class Zaisan extends Component {
 
   componentDidMount() {
     const userID = 1; // we must use auth
-    axios.get('http://localhost:8000/api/v1/credit_prop/')
-      .then(res => {
-        let creditPropData = res.data.filter((item, index) => {
-          if (item.user === 1) return true;
-        });
-        this.setState({
-          creditPropData: creditPropData
-        });
-      })
+    axios.get('http://localhost:8000/api/v1/credit_prop/').then(res => {
+      let creditPropData = res.data.filter((item, index) => {
+        if (item.user === 1) return true;
+      });
+      this.setState({
+        creditPropData: creditPropData,
+      });
+    });
   }
 
   render() {
     return (
       <div>
         Properties
-
         <FormControl>
           <label>Property type</label>
           <Select
             labelId="account_type-label"
             id="account_type"
-            value={this.state.inputs.property_type}
-          >
+            value={this.state.inputs.property_type}>
             <MenuItem value={0}>Credit property</MenuItem>
             <MenuItem value={1}>Real estate property</MenuItem>
             <MenuItem value={2}>Others property</MenuItem>
