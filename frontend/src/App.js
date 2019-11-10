@@ -4,7 +4,7 @@ import Main from './components/Main';
 import Cover from './components/Cover';
 import Yuigonshya from './components/Yuigonshya';
 import Sozokunin from './components/Sozokunin';
-import Zaisan from './components/Zaisan/CreditProp';
+import Zaisan from './components/Zaisan';
 import Explain from './components/WalkThrough/Explain';
 import Rules from './components/WalkThrough/Rules';
 import PlanDist from './components/Distribution/PlanDist';
