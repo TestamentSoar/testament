@@ -2,13 +2,13 @@ from django.shortcuts import render
 import django_filters
 from rest_framework import viewsets, filters
 
-from .models import ClaimProperty, RealEstateProperty, OthersProperty
-from .serializer import ClaimPropertySerializer, RealEstatePropertySerializer, OthersPropertySerializer
+from .models import CreditProperty, RealEstateProperty, OthersProperty
+from .serializer import CreditPropertySerializer, RealEstatePropertySerializer, OthersPropertySerializer
 
 # Create your views here.
-class ClaimPropertyViewSet(viewsets.ModelViewSet):
-    queryset = ClaimProperty.objects.all()
-    serializer_class = ClaimPropertySerializer
+class CreditPropertyViewSet(viewsets.ModelViewSet):
+    queryset = CreditProperty.objects.all()
+    serializer_class = CreditPropertySerializer
 
 class RealEstatePropertyViewSet(viewsets.ModelViewSet):
     queryset = RealEstateProperty.objects.all()

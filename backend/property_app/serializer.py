@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
-from .models import ClaimProperty, RealEstateProperty, OthersProperty
+from .models import CreditProperty, RealEstateProperty, OthersProperty
 
 
-class ClaimPropertySerializer(serializers.ModelSerializer):
+class CreditPropertySerializer(serializers.ModelSerializer):
     class Meta:
-        model = ClaimProperty
+        model = CreditProperty
         fields = (
             'user',
             'heir',

@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import ClaimProperty, RealEstateProperty, OthersProperty
+from .models import CreditProperty, RealEstateProperty, OthersProperty
 
 # Register your models here.
-@admin.register(ClaimProperty)
-class ClaimPropertyAdmin(admin.ModelAdmin):
+@admin.register(CreditProperty)
+class CreditPropertyAdmin(admin.ModelAdmin):
     pass
 
 @admin.register(RealEstateProperty)
