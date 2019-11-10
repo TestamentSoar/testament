@@ -3,7 +3,7 @@ from user.models import User
 from heir.models import Heir
 
 # Create your models here.
-class ClaimProperty(models.Model):
+class CreditProperty(models.Model):
     ACCOUNT_SET = (
         (0, 'saving account'),
         (1, 'current account'),
