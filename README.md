@@ -17,6 +17,7 @@ docker-compose run backend python manage.py migrate
 ```
 
 ```
+docker-compose build
 docker-compose up
 ```
 
