@@ -9,6 +9,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -65,7 +66,7 @@ class PlanDist extends Component {
           <Grid container spacing={1} justify="center" alignItems="center">
             <Grid item xs={11}>
               <Typography align="left" variant="h6" component="h2">
-                戻る
+                <Link to="main">戻る</Link>
               </Typography>
             </Grid>
             <Grid item xs={11}>

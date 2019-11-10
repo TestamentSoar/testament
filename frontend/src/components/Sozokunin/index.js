@@ -22,14 +22,18 @@ class Sozokunin extends Component {
       image: [],
       inputs: {
         name: '',
-        founded_date: '',
-        point: '',
-        introduction: '',
-        hobby: '',
+        address: '',
+        honseki: '',
+        birth: '',
+        job: '',
+        zokugara: '',
       },
     };
   }
-
+  handleChange(e) {
+    console.log(e);
+    this.setState({inputs: e.inputs});
+  }
   render() {
     return (
       <div>
@@ -50,28 +54,76 @@ class Sozokunin extends Component {
             <Grid item xs={11}>
               <Typography align="left" variant="h6" component="h2">
                 <label>名前</label>
-                <Input name="name" value={this.state.inputs.name} />
+                <Input
+                  name="name"
+                  value={this.state.inputs.name}
+                  onChange={e =>
+                    this.handleChange({
+                      ...this.state,
+                      inputs: {
+                        ...this.state.inputs,
+                        name: e.target.value,
+                      },
+                    })
+                  }
+                />
               </Typography>
             </Grid>
             <Box m={2} />
             <Grid item xs={11}>
               <Typography align="left" variant="h6" component="h2">
                 <label>住所</label>
-                <Input name="alias" value={this.state.inputs.founded_date} />
+                <Input
+                  name="alias"
+                  value={this.state.inputs.address}
+                  onChange={e =>
+                    this.handleChange({
+                      ...this.state,
+                      inputs: {
+                        ...this.state.inputs,
+                        address: e.target.value,
+                      },
+                    })
+                  }
+                />
               </Typography>
             </Grid>
             <Box m={2} />
             <Grid item xs={11}>
               <Typography align="left" variant="h6" component="h2">
                 <label>本籍</label>
-                <Input name="hobby" value={this.state.inputs['hobby']} />
+                <Input
+                  name="hobby"
+                  value={this.state.inputs.honseki}
+                  onChange={e =>
+                    this.handleChange({
+                      ...this.state,
+                      inputs: {
+                        ...this.state.inputs,
+                        honseki: e.target.value,
+                      },
+                    })
+                  }
+                />
               </Typography>
             </Grid>
             <Box m={2} />
             <Grid item xs={11}>
               <Typography align="left" variant="h6" component="h2">
                 <label>生年月日</label>
-                <Input name="point" value={this.state.inputs.point} />
+                <Input
+                  name="point"
+                  value={this.state.inputs.birth}
+                  onChange={e =>
+                    this.handleChange({
+                      ...this.state,
+                      inputs: {
+                        ...this.state.inputs,
+                        birth: e.target.value,
+                      },
+                    })
+                  }
+                />
               </Typography>
             </Grid>
             <Box m={2} />
@@ -80,7 +132,16 @@ class Sozokunin extends Component {
                 <label>職業</label>
                 <Input
                   name="introduction"
-                  value={this.state.inputs.introduction}
+                  value={this.state.inputs.job}
+                  onChange={e =>
+                    this.handleChange({
+                      ...this.state,
+                      inputs: {
+                        ...this.state.inputs,
+                        job: e.target.value,
+                      },
+                    })
+                  }
                 />
               </Typography>
             </Grid>
@@ -90,7 +151,16 @@ class Sozokunin extends Component {
                 <label>続柄</label>
                 <Input
                   name="introduction"
-                  value={this.state.inputs.introduction}
+                  value={this.state.inputs.zokugara}
+                  onChange={e =>
+                    this.handleChange({
+                      ...this.state,
+                      inputs: {
+                        ...this.state.inputs,
+                        zokugara: e.target.value,
+                      },
+                    })
+                  }
                 />
               </Typography>
             </Grid>
