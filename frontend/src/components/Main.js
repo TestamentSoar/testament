@@ -12,9 +12,12 @@ class Main extends Component {
       {name: '相続人', link: 'sozokunin'},
       {name: '財産', link: 'zaisan'},
       {name: '資産分配', link: 'plandist'},
-      {name: '印刷'},
       {name: '伝えたいこと'},
+      {name: '介護・人工呼吸器'},
+      {name: '臓器移植'},
+      {name: 'ペット'},
       {name: '葬儀'},
+      {name: '遺言書の印刷'},
     ];
     return (
       <div>
