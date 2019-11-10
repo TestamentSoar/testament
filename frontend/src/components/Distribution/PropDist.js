@@ -16,10 +16,10 @@ class PropDist extends Component {
     console.log('hello');
 
     axios.get('http://localhost:8000/api/v1/credit_prop/1/').then(response => {
+      console.table(response.data);
       this.setState({
         credits: response.data,
       });
-      console.log('hello');
     });
   }
 
@@ -27,9 +27,7 @@ class PropDist extends Component {
     const {credits} = this.state;
     return (
       <div>
-        {credits.map(credit => (
-          <h1>{credit.bank}</h1>
-        ))}
+        <h1>{credits.bank}</h1>
       </div>
     );
   }
