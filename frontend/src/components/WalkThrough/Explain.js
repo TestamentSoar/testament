@@ -4,6 +4,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,9 +39,16 @@ const Explain = () => {
         <Box m={10} />
         <Grid item xs={11}>
           <Typography align="center" variant="h6" component="h2">
-            <Link to="">戻る</Link>
-            <br />
-            <Link to="rules">進む</Link>
+            <Link to="">
+              <Button variant="contained" color="white">
+                戻る
+              </Button>
+            </Link>
+            <Link to="main">
+              <Button variant="contained" color="white">
+                進む
+              </Button>
+            </Link>
           </Typography>
         </Grid>
       </Grid>
