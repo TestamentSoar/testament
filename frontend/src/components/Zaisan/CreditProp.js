@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 //import DropZone from 'react-dropzone';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
 
@@ -11,11 +14,11 @@ class Zaisan extends Component {
     this.state = {
       image: [],
       inputs: {
-        name: '',
-        founded_date: '',
-        point: '',
-        introduction: '',
-        hobby: '',
+        bank: '',
+        branch: '',
+        account_type: '',
+        account_number: '',
+        price: '',
       },
     };
   }
@@ -24,20 +27,26 @@ class Zaisan extends Component {
     return (
       <div>
         <FormControl>
-          <label>預貯金</label>
-          <Input name="name" value={this.state.inputs.name} />
-          <label>住所</label>
-          <Input name="alias" value={this.state.inputs.founded_date} />
-          <label>本籍</label>
-          <Input name="hobby" value={this.state.inputs['hobby']} />
-          <label>生年月日</label>
-          <Input name="point" value={this.state.inputs.point} />
-          <label>仕事</label>
-          <Input name="introduction" value={this.state.inputs.introduction} />
-          <label>関係</label>
-          <Input name="introduction" value={this.state.inputs.introduction} />
-          <label>価値予想</label>
-          <Input name="introduction" value={this.state.inputs.introduction} />
+          <label>銀行</label>
+          <Input name="bank" value={this.state.inputs.bank} />
+          <label>支店</label>
+          <Input name="branch" value={this.state.inputs.branch} />
+          <label>講座の種類</label>
+          <Input name="account_type" value={this.state.inputs.account_type} />
+          <InputLabel id="demo-simple-select-label">Account type</InputLabel>
+          <Select
+            labelId="account_type-label"
+            id="account_type"
+            value={this.state.imputs.account_type}
+          >
+            <MenuItem value={0}>Saving account</MenuItem>
+            <MenuItem value={1}>Current account</MenuItem>
+            <MenuItem value={2}>Fixed account</MenuItem>
+          </Select>
+          <label>口座番号</label>
+          <Input name="account_number" value={this.state.inputs.account_number} />
+          <label>値段</label>
+          <Input name="price" value={this.state.inputs.price} />
           <Button variant="raised" onClick={this.handleSubmit}>
             Submit
           </Button>
