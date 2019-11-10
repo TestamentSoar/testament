@@ -22,6 +22,6 @@ docker-compose up
 
 ## URLs
 
-backend: http://localhost:8000/swagger  
+backend: http://localhost:8000/api/v1/document  
 frontend: http://localhost:3000/
 
